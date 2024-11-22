@@ -20,6 +20,7 @@ submenuLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
     const selectedLang = link.dataset.lang;
+    event.target.offsetParent.togglePopover();
     handleLanguageChange(selectedLang);
   });
 });
